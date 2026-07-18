@@ -1,11 +1,16 @@
 import Link from "next/link";
 import { ThemeToggle } from "./ThemeToggle";
+import { Logomark } from "./Logomark";
 
 export function Header({ title }: { title?: string }) {
   return (
     <header className="w-full border-b border-border">
       <div className="mx-auto flex h-16 max-w-5xl items-center justify-between px-6">
-        <Link href="/" className="font-mono-label text-[13px] tracking-tight text-text-primary">
+        <Link
+          href="/"
+          className="flex items-center gap-2 font-mono-label text-[13px] tracking-tight text-text-primary"
+        >
+          <Logomark className="h-4 w-5 text-accent" />
           vitals
         </Link>
 

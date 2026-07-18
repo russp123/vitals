@@ -75,7 +75,7 @@ export function ScanForm() {
         <button
           type="submit"
           disabled={loading || url.trim().length === 0}
-          className="inline-flex items-center justify-center gap-2 rounded-full bg-accent px-6 py-3 font-mono-label text-[13px] uppercase tracking-wide text-accent-foreground transition-opacity hover:opacity-90 disabled:opacity-50"
+          className="inline-flex items-center justify-center gap-2 rounded-full bg-accent px-6 py-3 font-mono-label text-[13px] uppercase tracking-wide text-accent-foreground transition-colors hover:bg-accent-hover disabled:opacity-50"
         >
           {loading ? "Scanning…" : "Scan →"}
         </button>
