@@ -1,0 +1,119 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #fbfbfb;
+  --bg-elevated: #ffffff;
+  --text-primary: #161616;
+  --text-secondary: #6e6e6e;
+  --text-tertiary: #a3a3a3;
+  --border: rgba(0, 0, 0, 0.1);
+  --accent: #161616;
+  --accent-foreground: #fbfbfb;
+  --badge-accent: #9c6e10;
+  --badge-border: rgba(156, 110, 16, 0.4);
+  --badge-bg: rgba(156, 110, 16, 0.08);
+  --selection-bg: #f8e1d5;
+  --selection-text: #b5540f;
+
+  --grade-a: #1a7f37;
+  --grade-b: #4d8c1f;
+  --grade-c: #9c6e10;
+  --grade-d: #c2591a;
+  --grade-f: #c0342c;
+}
+
+:root[data-theme="dark"] {
+  --bg: #101010;
+  --bg-elevated: #171717;
+  --text-primary: #f2f2f2;
+  --text-secondary: #a3a3a3;
+  --text-tertiary: #6e6e6e;
+  --border: rgba(255, 255, 255, 0.12);
+  --accent: #f2f2f2;
+  --accent-foreground: #161616;
+  --badge-accent: #d8a63e;
+  --badge-border: rgba(216, 166, 62, 0.4);
+  --badge-bg: rgba(216, 166, 62, 0.1);
+  --selection-bg: #4a2a1a;
+  --selection-text: #f0b98b;
+
+  --grade-a: #3fb968;
+  --grade-b: #7cc543;
+  --grade-c: #d8a63e;
+  --grade-d: #e08a45;
+  --grade-f: #e2564c;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #101010;
+    --bg-elevated: #171717;
+    --text-primary: #f2f2f2;
+    --text-secondary: #a3a3a3;
+    --text-tertiary: #6e6e6e;
+    --border: rgba(255, 255, 255, 0.12);
+    --accent: #f2f2f2;
+    --accent-foreground: #161616;
+    --badge-accent: #d8a63e;
+    --badge-border: rgba(216, 166, 62, 0.4);
+    --badge-bg: rgba(216, 166, 62, 0.1);
+    --selection-bg: #4a2a1a;
+    --selection-text: #f0b98b;
+
+    --grade-a: #3fb968;
+    --grade-b: #7cc543;
+    --grade-c: #d8a63e;
+    --grade-d: #e08a45;
+    --grade-f: #e2564c;
+  }
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-bg-elevated: var(--bg-elevated);
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-tertiary: var(--text-tertiary);
+  --color-border: var(--border);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-badge-accent: var(--badge-accent);
+  --color-badge-border: var(--badge-border);
+  --color-badge-bg: var(--badge-bg);
+
+  --font-display: var(--font-instrument-serif);
+  --font-sans: -apple-system, "system-ui", "SF Pro Text", "Helvetica Neue",
+    Helvetica, Arial, sans-serif;
+  --font-mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+}
+
+* {
+  border-color: var(--border);
+}
+
+html {
+  color-scheme: light;
+}
+
+html[data-theme="dark"] {
+  color-scheme: dark;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+}
+
+::selection {
+  background: var(--selection-bg);
+  color: var(--selection-text);
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-mono-label {
+  font-family: var(--font-mono);
+}
